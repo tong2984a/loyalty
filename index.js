@@ -1,46 +1,24 @@
 const express = require('express')
+const path = require('path')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const {pool} = require('./config')
-
+const db = require('./queries')
 const app = express()
+const port = process.env.PORT || 3002
 
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 
-const getBooks = (request, response) => {
-  pool.query('SELECT * FROM books', (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
-  })
-}
-
-const addBook = (request, response) => {
-  const {author, title} = request.body
-
-  pool.query(
-    'INSERT INTO books (author, title) VALUES ($1, $2)',
-    [author, title],
-    (error) => {
-      if (error) {
-        throw error
-      }
-      response.status(201).json({status: 'success', message: 'Book added.'})
-    },
-  )
-}
-
-app
-  .route('/books')
-  // GET endpoint
-  .get(getBooks)
-  // POST endpoint
-  .post(addBook)
-
+app.get('/users', db.getUsers)
+app.get('/users/:id', db.getUserById)
+app.post('/users', db.createUser)
+app.put('/users/:id', db.updateUser)
+app.delete('/users/:id', db.deleteUser)
+app.post('/redemptions/:id', db.redeemReward)
+app.post('/earnings/:id', db.earnReward)
 // Start server
-app.listen(process.env.PORT || 3002, () => {
+app.listen(port, () => {
   console.log(`Server listening`)
 })
