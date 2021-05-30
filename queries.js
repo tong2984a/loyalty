@@ -22,13 +22,10 @@ const getUserById = (request, response) => {
 
 const createUser = (request, response) => {
   const { alias, address, balance } = request.body
-  console.log("alias", alias)
   pool.query('INSERT INTO users (alias, address, balance) VALUES ($1, $2, $3) returning ID', [alias, address, balance], (error, result) => {
     if (error) {
-      console.log(error)
       throw error
     }
-    console.log('good', result.rows[0].id)
     response.status(201).json(result.rows[0].id)
   })
 }

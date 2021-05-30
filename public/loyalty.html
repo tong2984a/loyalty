@@ -186,50 +186,37 @@
     var aliasValue = earnAliasInput.value;
     var amountValue = earnAmountInput.value;
     var currencyCodeValue = earnCurrencyCodeInput.value;
-    $.get(`/users/${aliasValue}`, function(data) {
-      if (data.length > 0) {
-        var balance = data[0].balance;
-        var parseOne = parseFloat(balance),
-            parseTwo = parseFloat(amountValue);
-        if (isNaN(parseOne)) parseOne = 0;
-        if (isNaN(parseTwo)) parseTwo = 0;
-        if (currencyCodeValue === "HKD") {
-          $.get(`https://blockchain.info/tobtc?currency=HKD&value=${parseTwo}`, function(data) {
-            var parseThree = parseFloat(data);
-            if (isNaN(parseThree)) parseThree = 0;
-            let earning = {
-              amount: parseThree,
-              currencyCode:  currencyCodeValue
-            };
-            $.post(`/earnings/${aliasValue}`, earning, function(data, status) {
-              var alertHtml = `Successfully added ${amountValue} HKD / ${parseThree} BTC.`
-              $('#alert-earn').html(alertHtml);
-              document.getElementById('alert-earn').style.display = "block";
-              document.getElementById('btn-earn').style.display = "block";
-              document.getElementById('spin-earn').style.display = "none";
-            })
-          })
-        } else {
-          let earning = {
-            amount: parseTwo,
-            currencyCode:  currencyCodeValue
-          };
-          $.post(`/earnings/${aliasValue}`, earning, function(data, status) {
-            var alertHtml = `Successfully added ${amountValue} ${currencyCodeValue}.`
-            $('#alert-earn').html(alertHtml);
-            document.getElementById('alert-earn').style.display = "block";
-            document.getElementById('btn-earn').style.display = "block";
-            document.getElementById('spin-earn').style.display = "none";
-          })
-        }
-      } else {
-        var alertHtml = `Unable to find account: ${aliasValue}`
-        $('#error-earn').html(alertHtml);
-        document.getElementById('error-earn').style.display = "block";
+    var parseTwo = parseFloat(amountValue);
+    if (isNaN(parseTwo)) parseTwo = 0;
+    if (currencyCodeValue === "HKD") {
+      $.get(`https://blockchain.info/tobtc?currency=HKD&value=${parseTwo}`, function(data) {
+        var parseThree = parseFloat(data);
+        if (isNaN(parseThree)) parseThree = 0;
+        let earning = {
+          amount: parseThree,
+          currencyCode:  currencyCodeValue
+        };
+        $.post(`/earnings/${aliasValue}`, earning, function(data, status) {
+          var alertHtml = `Successfully added ${amountValue} HKD / ${parseThree} BTC.`
+          $('#alert-earn').html(alertHtml);
+          document.getElementById('alert-earn').style.display = "block";
+          document.getElementById('btn-earn').style.display = "block";
+          document.getElementById('spin-earn').style.display = "none";
+        })
+      })
+    } else {
+      let earning = {
+        amount: parseTwo,
+        currencyCode:  currencyCodeValue
+      };
+      $.post(`/earnings/${aliasValue}`, earning, function(data, status) {
+        var alertHtml = `Successfully added ${amountValue} ${currencyCodeValue}.`
+        $('#alert-earn').html(alertHtml);
+        document.getElementById('alert-earn').style.display = "block";
         document.getElementById('btn-earn').style.display = "block";
         document.getElementById('spin-earn').style.display = "none";
-      }
-    })
+      })
+    }
   });
 
   const redeemButton = document.getElementById('btn-redeem');
@@ -244,50 +231,37 @@
     var aliasValue = redeemAliasInput.value;
     var amountValue = redeemAmountInput.value;
     var currencyCodeValue = redeemCurrencyCodeInput.value;
-    $.get(`/users/${aliasValue}`, function(data) {
-      if (data.length > 0) {
-        var balance = data[0].balance;
-        var parseOne = parseFloat(balance),
-            parseTwo = parseFloat(amountValue);
-        if (isNaN(parseOne)) parseOne = 0;
-        if (isNaN(parseTwo)) parseTwo = 0;
-        if (currencyCodeValue === "HKD") {
-          $.get(`https://blockchain.info/tobtc?currency=HKD&value=${parseTwo}`, function(data) {
-            var parseThree = parseFloat(data);
-            if (isNaN(parseThree)) parseThree = 0;
-            let earning = {
-              amount: parseThree,
-              currencyCode:  currencyCodeValue
-            };
-            $.post(`/redemptions/${aliasValue}`, earning, function(data, status) {
-              var alertHtml = `Successfully redeemed ${amountValue} HKD / ${parseThree} BTC.`
-              $('#alert-redeem').html(alertHtml);
-              document.getElementById('alert-redeem').style.display = "block";
-              document.getElementById('btn-redeem').style.display = "block";
-              document.getElementById('spin-redeem').style.display = "none";
-            })
-          })
-        } else {
-          let redemption = {
-            amount: parseTwo,
-            currencyCode:  currencyCodeValue
-          };
-          $.post(`/redemptions/${aliasValue}`, redemption, function(data, status) {
-            var alertHtml = `Successfully redeemed ${amountValue} ${currencyCodeValue}.`
-            $('#alert-redeem').html(alertHtml);
-            document.getElementById('alert-redeem').style.display = "block";
-            document.getElementById('btn-redeem').style.display = "block";
-            document.getElementById('spin-redeem').style.display = "none";
-          })
-        }
-      } else {
-        var alertHtml = `Unable to find account: ${aliasValue}`
-        $('#error-redeem').html(alertHtml);
-        document.getElementById('error-redeem').style.display = "block";
+    var parseTwo = parseFloat(amountValue);
+    if (isNaN(parseTwo)) parseTwo = 0;
+    if (currencyCodeValue === "HKD") {
+      $.get(`https://blockchain.info/tobtc?currency=HKD&value=${parseTwo}`, function(data) {
+        var parseThree = parseFloat(data);
+        if (isNaN(parseThree)) parseThree = 0;
+        let earning = {
+          amount: parseThree,
+          currencyCode:  currencyCodeValue
+        };
+        $.post(`/redemptions/${aliasValue}`, earning, function(data, status) {
+          var alertHtml = `Successfully redeemed ${amountValue} HKD / ${parseThree} BTC.`
+          $('#alert-redeem').html(alertHtml);
+          document.getElementById('alert-redeem').style.display = "block";
+          document.getElementById('btn-redeem').style.display = "block";
+          document.getElementById('spin-redeem').style.display = "none";
+        })
+      })
+    } else {
+      let redemption = {
+        amount: parseTwo,
+        currencyCode:  currencyCodeValue
+      };
+      $.post(`/redemptions/${aliasValue}`, redemption, function(data, status) {
+        var alertHtml = `Successfully redeemed ${amountValue} ${currencyCodeValue}.`
+        $('#alert-redeem').html(alertHtml);
+        document.getElementById('alert-redeem').style.display = "block";
         document.getElementById('btn-redeem').style.display = "block";
         document.getElementById('spin-redeem').style.display = "none";
-      }
-    })
+      })
+    }
   });
 
   const queryButton = document.getElementById('btn-query');
