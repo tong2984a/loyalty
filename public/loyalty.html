@@ -125,6 +125,21 @@
         <button id="btn-query" type="button" class="btn btn-primary">Submit</button>
       </div>
     </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Query All Accounts</h1>
+        <p class="lead">Return a list of all accounts.</p>
+        <div style="display: none;" id="alert-query-all" class="alert alert-success alert-dismissible fade show" role="alert">
+        </div>
+        <div style="display: none;" id="error-query-all" class="alert alert-danger alert-dismissible fade show" role="alert">
+        </div>
+        <div style="display: none;" id="spin-query-all" class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <button id="btn-query-all" type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
@@ -292,6 +307,41 @@
         document.getElementById('btn-query').style.display = "block";
         document.getElementById('spin-query').style.display = "none";
       }
+    })
+  });
+
+  const queryAllButton = document.getElementById('btn-query-all');
+  queryAllButton.addEventListener('click', () => {
+    document.getElementById('alert-query-all').style.display = "none";
+    document.getElementById('error-query-all').style.display = "none";
+    document.getElementById('btn-query-all').style.display = "none";
+    document.getElementById('spin-query-all').style.display = "block";
+    $.get(`/users`, function(data) {
+      var accounts = [];
+      data.forEach((item, i) => {
+        var balance = item.balance;
+        var account = item.alias;
+        $.post('https://cex.io/api/convert/BTC/USD', {"amnt":balance}, function(data, status) {
+          let amnt = (Math.round(data['amnt'] * 100) / 100).toFixed(2);
+          accounts.push([`<tr>`, `<td>${account}</td>`, `<td>BTC ${balance} / USD $${amnt}</td>`, `</tr>`]);
+          var html = `
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ALIAS</th>
+                  <th scope="col">BALANCE</th>
+                </tr>
+              </thead>
+              <tbody>`
+              + accounts.join()
+              + `</tbody>
+            </table>`;
+          $('#alert-query-all').html(html);
+          document.getElementById('alert-query-all').style.display = "block";
+          document.getElementById('btn-query-all').style.display = "block";
+          document.getElementById('spin-query-all').style.display = "none";
+        })
+      })
     })
   });
   </script>
