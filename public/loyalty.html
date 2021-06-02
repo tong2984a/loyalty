@@ -173,7 +173,7 @@
     document.getElementById('error-register-new-account').style.display = "none";
     document.getElementById('btn-register-new-account').style.display = "none";
     document.getElementById('spin-register-new-account').style.display = "block";
-    var aliasValue = registerAliasInput.value;
+    var aliasValue = registerAliasInput.value.trim();
     var balanceValue = registerBalanceInput.value || 10;
     let account = {
       alias: aliasValue,
@@ -198,9 +198,9 @@
     document.getElementById('error-earn').style.display = "none";
     document.getElementById('btn-earn').style.display = "none";
     document.getElementById('spin-earn').style.display = "block";
-    var aliasValue = earnAliasInput.value;
+    var aliasValue = earnAliasInput.value.trim();
     var amountValue = earnAmountInput.value;
-    var currencyCodeValue = earnCurrencyCodeInput.value;
+    var currencyCodeValue = earnCurrencyCodeInput.value.trim();
     var parseTwo = parseFloat(amountValue);
     if (isNaN(parseTwo)) parseTwo = 0;
     if (currencyCodeValue === "HKD") {
@@ -243,9 +243,9 @@
     document.getElementById('error-redeem').style.display = "none";
     document.getElementById('btn-redeem').style.display = "none";
     document.getElementById('spin-redeem').style.display = "block";
-    var aliasValue = redeemAliasInput.value;
+    var aliasValue = redeemAliasInput.value.trim();
     var amountValue = redeemAmountInput.value;
-    var currencyCodeValue = redeemCurrencyCodeInput.value;
+    var currencyCodeValue = redeemCurrencyCodeInput.value.trim();
     var parseTwo = parseFloat(amountValue);
     if (isNaN(parseTwo)) parseTwo = 0;
     if (currencyCodeValue === "HKD") {
@@ -286,7 +286,7 @@
     document.getElementById('error-query').style.display = "none";
     document.getElementById('btn-query').style.display = "none";
     document.getElementById('spin-query').style.display = "block";
-    var aliasValue = queryAliasInput.value;
+    var aliasValue = queryAliasInput.value.trim();
     $.get(`/users/${aliasValue}`, function(data) {
       if (data.length > 0) {
         var balance = data[0].balance;
