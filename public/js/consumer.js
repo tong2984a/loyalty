@@ -27,7 +27,7 @@ var json = {
       }
      ],
      "hasNone": true,
-     "noneText": "Do not  send me anything"
+     "noneText": "Do not send me anything"
     },
     {
      "type": "checkbox",
@@ -177,7 +177,7 @@ var json = {
     {
      "type": "checkbox",
      "name": "question6",
-     "title": "Region - select more than 1",
+     "title": "Seller Location - select more than 1",
      "isRequired": true,
      "choices": [
       {
