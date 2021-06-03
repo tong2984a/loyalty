@@ -5,6 +5,7 @@ const getUsers = (request, response) => {
     if (error) {
       throw error
     }
+    response.header('Cache-Control', 'no-cache, no-store, must-revalidate')
     response.status(200).json(results.rows)
   })
 }
@@ -16,6 +17,7 @@ const getUserById = (request, response) => {
     if (error) {
       throw error
     }
+    response.header('Cache-Control', 'no-cache, no-store, must-revalidate')
     response.status(200).json(results.rows)
   })
 }
