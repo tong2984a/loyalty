@@ -24,18 +24,16 @@ var json = {
       {
        "value": "item3",
        "text": "Vegan Fashion & Lifestyle"
-      },
-      {
-       "value": "item4",
-       "text": "Do not send me anything"
       }
-     ]
+     ],
+     "hasNone": true,
+     "noneText": "Do not  send me anything"
     },
     {
      "type": "checkbox",
      "name": "question3",
      "visible": false,
-     "visibleIf": "{question2} = ['item1']",
+     "visibleIf": "{question2} contains 'item1'",
      "title": "Vegan Dishes",
      "isRequired": true,
      "choices": [
@@ -77,7 +75,7 @@ var json = {
      "type": "checkbox",
      "name": "question4",
      "visible": false,
-     "visibleIf": "{question2} = ['item2']",
+     "visibleIf": "{question2} contains 'item2'",
      "title": "Vegan Groceries",
      "isRequired": true,
      "choices": [
@@ -127,7 +125,7 @@ var json = {
      "type": "checkbox",
      "name": "question5",
      "visible": false,
-     "visibleIf": "{question2} = ['item3']",
+     "visibleIf": "{question2} contains 'item3'",
      "title": "Vegan Fashion",
      "isRequired": true,
      "choices": [
@@ -240,11 +238,13 @@ var json = {
 window.survey = new Survey.Model(json);
 
 survey
-    .onComplete
-    .add(function (sender) {
-        document
-            .querySelector('#surveyResult')
-            .textContent = "Result JSON:\n" + JSON.stringify(sender.data, null, 3);
-    });
+.onComplete
+.add(function (sender) {
+  $.post(`/survey/consumers`, {results: JSON.stringify(sender.data, null, 3)}, function(data, status) {
+    document
+    .querySelector('#surveyResult')
+    .textContent = "Successfully completed survey";
+  })
+});
 
 survey.render("surveyElement");

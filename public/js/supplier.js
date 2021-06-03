@@ -140,7 +140,7 @@ var json = {
      "type": "file",
      "name": "Upload Dish Photo",
      "waitForUpload": true,
-     "maxSize": 0
+     "maxSize": 60000
     }
    ]
   }
@@ -150,11 +150,13 @@ var json = {
 window.survey = new Survey.Model(json);
 
 survey
-    .onComplete
-    .add(function (sender) {
-        document
-            .querySelector('#surveyResult')
-            .textContent = "Result JSON:\n" + JSON.stringify(sender.data, null, 3);
-    });
+.onComplete
+.add(function (sender) {
+  $.post(`/survey/suppliers`, {results: JSON.stringify(sender.data, null, 3)}, function(data, status) {
+    document
+    .querySelector('#surveyResult')
+    .textContent = "Successfully completed survey";
+  })
+});
 
 survey.render("surveyElement");

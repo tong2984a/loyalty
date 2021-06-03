@@ -91,6 +91,26 @@ const deleteUser = (request, response) => {
   })
 }
 
+const createConsumerSurvey = (request, response) => {
+  const { results } = request.body
+  pool.query('INSERT INTO consumer_surveys (results) VALUES ($1) returning ID', [results.trim()], (error, result) => {
+    if (error) {
+      throw error
+    }
+    response.status(201).json(result.rows[0].id)
+  })
+}
+
+const createSupplierSurvey = (request, response) => {
+  const { results } = request.body
+  pool.query('INSERT INTO supplier_surveys (results) VALUES ($1) returning ID', [results.trim()], (error, result) => {
+    if (error) {
+      throw error
+    }
+    response.status(201).json(result.rows[0].id)
+  })
+}
+
 module.exports = {
   getUsers,
   getUserById,
@@ -98,5 +118,7 @@ module.exports = {
   updateUser,
   deleteUser,
   earnReward,
-  redeemReward
+  redeemReward,
+  createConsumerSurvey,
+  createSupplierSurvey
 }

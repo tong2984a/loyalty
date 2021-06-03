@@ -18,6 +18,8 @@ app.put('/users/:id', db.updateUser)
 app.delete('/users/:id', db.deleteUser)
 app.post('/redemptions/:id', db.redeemReward)
 app.post('/earnings/:id', db.earnReward)
+app.post('/survey/consumers', db.createConsumerSurvey)
+app.post('/survey/suppliers', db.createSupplierSurvey)
 // Start server
 app.listen(port, () => {
   console.log(`Server listening`)

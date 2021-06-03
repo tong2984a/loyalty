@@ -1,0 +1,9 @@
+CREATE TABLE consumer_surveys (
+  ID SERIAL PRIMARY KEY,
+  results VARCHAR(104857) NOT NULL
+);
+
+CREATE TABLE supplier_surveys (
+  ID SERIAL PRIMARY KEY,
+  results VARCHAR(104857) NOT NULL
+);
