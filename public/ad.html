@@ -207,12 +207,11 @@ body {
   <script>
   function handleChange(src) {
     $.get(`/ads`, {id: src.value}, function(data) {
-      console.log(data);
       if (data.length > 0) {
         var alertHtml = `<img src="${data}" alt="sky" class="pic1">`;
         $('#alert-query').html(alertHtml);
       } else {
-        var alertHtml = `Unable to find survey id: 3`
+        var alertHtml = `Unable to find survey id: ${src.value}`
         $('#alert-query').html(alertHtml);
       }
     })
