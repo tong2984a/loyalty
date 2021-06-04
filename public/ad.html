@@ -207,14 +207,13 @@ body {
   <script>
   function handleChange(src) {
     $.get(`/ads`, {id: src.value}, function(data) {
+      console.log(data);
       if (data.length > 0) {
         var alertHtml = `<img src="${data}" alt="sky" class="pic1">`;
         $('#alert-query').html(alertHtml);
-        document.getElementById('alert-query').style.display = "block";
       } else {
         var alertHtml = `Unable to find survey id: 3`
-        $('#error-query').html(alertHtml);
-        document.getElementById('error-query').style.display = "block";
+        $('#alert-query').html(alertHtml);
       }
     })
   }
