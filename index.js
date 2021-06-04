@@ -20,6 +20,7 @@ app.post('/redemptions/:id', db.redeemReward)
 app.post('/earnings/:id', db.earnReward)
 app.post('/survey/consumers', db.createConsumerSurvey)
 app.post('/survey/suppliers', db.createSupplierSurvey)
+app.get('/ads', db.getSupplierSurveyById)
 // Start server
 app.listen(port, () => {
   console.log(`Server listening`)

@@ -111,6 +111,20 @@ const createSupplierSurvey = (request, response) => {
   })
 }
 
+const getSupplierSurveyById = (request, response) => {
+  var id = request.query.id;
+  id = 4;
+
+  pool.query('SELECT * FROM supplier_surveys WHERE ID = $1', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.header('Cache-Control', 'no-cache, no-store, must-revalidate');
+    var image = JSON.parse(results.rows[0].results)['Upload Dish Photo'][0].content;
+    response.status(200).send(image);
+  })
+}
+
 module.exports = {
   getUsers,
   getUserById,
@@ -120,5 +134,6 @@ module.exports = {
   earnReward,
   redeemReward,
   createConsumerSurvey,
-  createSupplierSurvey
+  createSupplierSurvey,
+  getSupplierSurveyById
 }
