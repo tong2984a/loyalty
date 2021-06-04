@@ -207,9 +207,7 @@ body {
   <script>
     $.get(`/ads`, {id: 3}, function(data) {
       if (data.length > 0) {
-        console.log(data);
         var alertHtml = `<img src="${data}" alt="sky" class="pic1">`;
-        console.log(alertHtml);
         $('#alert-query').html(alertHtml);
         document.getElementById('alert-query').style.display = "block";
       } else {
