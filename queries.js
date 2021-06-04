@@ -113,7 +113,6 @@ const createSupplierSurvey = (request, response) => {
 
 const getSupplierSurveyById = (request, response) => {
   var id = request.query.id;
-  id = 1;
 
   pool.query('SELECT * FROM supplier_surveys WHERE ID = $1', [id], (error, results) => {
     if (error) {

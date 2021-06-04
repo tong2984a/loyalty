@@ -183,19 +183,19 @@ body {
 <body>
   <div>
     <label class="rad-label">
-      <input type="radio" class="rad-input" name="rad">
+      <input type="radio" class="rad-input" id="dish" name="rad" onchange="handleChange(this);" value="1">
       <div class="rad-design"></div>
       <div class="rad-text">Vegan Dishes</div>
     </label>
 
     <label class="rad-label">
-      <input type="radio" class="rad-input" name="rad">
+      <input type="radio" class="rad-input" id="grocery" name="rad" onchange="handleChange(this);" value="2">
       <div class="rad-design"></div>
       <div class="rad-text">Vegan Groceries</div>
     </label>
 
     <label class="rad-label">
-      <input type="radio" class="rad-input" name="rad">
+      <input type="radio" class="rad-input" id="fashion" name="rad" onchange="handleChange(this);" value="3">
       <div class="rad-design"></div>
       <div class="rad-text">Vegan Fashion & Lifestyle</div>
     </label>
@@ -205,7 +205,8 @@ body {
   </div>
 
   <script>
-    $.get(`/ads`, {id: 3}, function(data) {
+  function handleChange(src) {
+    $.get(`/ads`, {id: src.value}, function(data) {
       if (data.length > 0) {
         var alertHtml = `<img src="${data}" alt="sky" class="pic1">`;
         $('#alert-query').html(alertHtml);
@@ -216,6 +217,11 @@ body {
         document.getElementById('error-query').style.display = "block";
       }
     })
+  }
+
+  (function () {
+    document.getElementById('dish').click();
+  })();
   </script>
 
 </body>
