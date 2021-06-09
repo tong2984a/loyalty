@@ -38,13 +38,13 @@
           <a href="consents.html" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-pie fa-fw me-3"></i><span>Consents</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
+          <a href="preferences.html" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-bar fa-fw me-3"></i><span>Preferences</span>
           </a>
           <a href="dsar.html" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-building fa-fw me-3"></i><span>DSAR</span>
           </a>
-          <a href="logbook.html" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
             <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Log Book</span>
           </a>
         </div>
@@ -170,23 +170,21 @@
   <main style="margin-top: 58px">
     <div class="container pt-4">
       <!--Section: Table-->
-      <section class="mb-4">
         <div class="container-fluid px-4">
-          <h1 class="mt-4">Preferences</h1>
+          <h1 class="mt-4">Log Book</h1>
           <div class="card mb-4">
             <div class="card-header">
               <i class="fas fa-table me-1"></i>
-              Aggregate of Consents
+              Opt-Out requests at a glance
             </div>
             <div class="card-body">
               <table id="datatablesSimple">
                 <thead>
                   <tr>
-                    <th>Contact</th>
-                    <th>Full Name</th>
-                    <th>Preferences</th>
+                    <th>Preference ID</th>
+                    <th>Consent ID</th>
+                    <th>Request Date</th>
                     <th>Status</th>
-                    <th>Category</th>
                     <th>Sensitivity</th>
                   </tr>
                 </thead>
@@ -203,458 +201,401 @@
                 <tbody>
                   <tr>
                     <td>Tiger@yahoo.com</td>
-                    <td>Tiger Nixon</td>
-                    <td>Salad, Burger</td>
-                    <td>Active</td>
-                    <td>B2B</td>
+                    <td>39647727</td>
+                    <td>Jul 8, 2012</td>
+                    <td>Admin fee invoice sent</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Garrett@yahoo.com</td>
-                    <td>Garrett Winters</td>
-                    <td>Vegetables</td>
-                    <td>Suppressed</td>
-                    <td></td>
+                    <td>18299093</td>
+                    <td>Jun 15, 2012</td>
+                    <td>Stop request received</td>
                     <td>Financial</td>
                   </tr>
                   <tr>
                     <td>Ashton@yahoo.com</td>
-                    <td>Ashton Cox</td>
-                    <td>Plant-Based Meat</td>
-                    <td>Expired</td>
-                    <td>Legal Person</td>
+                    <td>19829029</td>
+                    <td>Aug 12, 2012</td>
+                    <td>Data access request received</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Cedric@gmail.com</td>
-                    <td>Cedric Kelly</td>
-                    <td>Plant-Based Meat</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>91829022</td>
+                    <td>Feb 16, 2012</td>
+                    <td>Identification attempt initiated</td>
                     <td>Biometric</td>
                   </tr>
                   <tr>
                     <td>Airi@gmail.com</td>
-                    <td>Airi Satou</td>
-                    <td>Plant-Based Meat</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18829073</td>
+                    <td>Mar 12, 2012</td>
+                    <td>Identification verified</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Brielle@outlook.com</td>
-                    <td>Brielle Williamson</td>
-                    <td>Seasonings, Sauce</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>17829423</td>
+                    <td>Sep 12, 2012</td>
+                    <td>Stop request completed</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Herrod@outlook.com</td>
-                    <td>Herrod Chandler</td>
-                    <td>Plant-Based Egg</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>61829093</td>
+                    <td>Apr 12, 2012</td>
+                    <td>Data access request completed</td>
                     <td>Medical</td>
                   </tr>
                   <tr>
                     <td>Rhona@hotmail.com</td>
-                    <td>Rhona Davidson</td>
-                    <td>Seasonings, Sauce</td>
-                    <td>Active</td>
-                    <td>B2B</td>
+                    <td>71829421</td>
+                    <td>Jan 9, 2012</td>
+                    <td>Stop request completed</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Colleen@outlook.com</td>
-                    <td>Colleen Hurst</td>
-                    <td>Snack</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>71829823</td>
+                    <td>Nov 4, 2012</td>
+                    <td>Data access request received</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Sonya@hotmail.com</td>
-                    <td>Sonya Frost</td>
-                    <td>Dessert</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>17829013</td>
+                    <td>Dec 12, 2012</td>
+                    <td>Stop request completed</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Jena@gmail.com</td>
-                    <td>Jena Gaines</td>
-                    <td>Fruits</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18296723</td>
+                    <td>May 12, 2012</td>
+                    <td>Admin fee invoice sent</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Quinn@outlook.com</td>
-                    <td>Quinn Flynn</td>
-                    <td>Plant-Based Dairy</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18289013</td>
+                    <td>Oct 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Charde@yahoo.com</td>
-                    <td>Charde Marshall</td>
-                    <td>Plant-Based Dairy</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>17829723</td>
+                    <td>Jul 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Haley@outlook.com</td>
-                    <td>Haley Kennedy</td>
-                    <td>Plant-Based Dairy</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18229223</td>
+                    <td>Jun 5, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Tatyana@hotmail.com</td>
-                    <td>Tatyana Fitzpatrick</td>
-                    <td>Plant-Based Dairy</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>61829523</td>
+                    <td>Feb 1, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Michael@yahoo.com</td>
-                    <td>Michael Silva</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>71829028</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Paul@gmail.com</td>
-                    <td>Paul Byrd</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18729093</td>
+                    <td>Oct 6, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Gloria@gmail.com</td>
-                    <td>Gloria Little</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>16829463</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Data access request received</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Bradley@yahoo.com</td>
-                    <td>Bradley Greer</td>
-                    <td>Dessert</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>11829263</td>
+                    <td>Nov 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Dai@gmail.com</td>
-                    <td>Dai Rios</td>
-                    <td>Farmer's Market</td>
-                    <td>Suppressed</td>
-                    <td></td>
+                    <td>19829023</td>
+                    <td>Sep 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Financial</td>
                   </tr>
                   <tr>
                     <td>Jenette@yahoo.com</td>
-                    <td>Jenette Caldwell</td>
-                    <td>Farmer's Market</td>
-                    <td>Suppressed</td>
-                    <td>Legal Person</td>
+                    <td>10829023</td>
+                    <td>Jun 22, 2012</td>
+                    <td>Data access request received</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Yuri@hotmail.com</td>
-                    <td>Yuri Berry</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td>B2B</td>
+                    <td>18829023</td>
+                    <td>Oct 12, 2012</td>
+                    <td>Identification attempt initiated</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Caesar@outlook.com</td>
-                    <td>Caesar Vance</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290823</td>
+                    <td>Feb 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Doris@yahoo.com</td>
-                    <td>Doris Wilder</td>
-                    <td>Plant-Based Egg</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18295023</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Stop request completed</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Angelica@hotmail.com</td>
-                    <td>Angelica Ramos</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18329023</td>
+                    <td>Oct 27, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Gavin@yahoo.com</td>
-                    <td>Gavin Joyce</td>
-                    <td>Fruits</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>11829023</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Admin fee invoice sent</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Jennifer@yahoo.com</td>
-                    <td>Jennifer Chang</td>
-                    <td>Plant-Based Dairy</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>16829023</td>
+                    <td>Sep 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Brenden@outlook.com</td>
-                    <td>Brenden Wagner</td>
-                    <td>Dessert</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>51829023</td>
+                    <td>Jun 8, 2012</td>
+                    <td>Identification attempt initiated</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Fiona@yahoo.com</td>
-                    <td>Fiona Green</td>
-                    <td>Fruits</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>14829023</td>
+                    <td>Oct 12, 2012</td>
+                    <td>Stop request completed</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Shou@outlook.com</td>
-                    <td>Shou Itou</td>
-                    <td>Fruits</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18429023</td>
+                    <td>Feb 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Michelle@gmail.com</td>
-                    <td>Michelle House</td>
-                    <td>Seasonings, Sauce</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>12829023</td>
+                    <td>Nov 12, 2012</td>
+                    <td>Identification verified</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Suki@yahoo.com</td>
-                    <td>Suki Burks</td>
-                    <td>Fruits</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290237</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Admin fee invoice sent</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Prescott@yahoo.com</td>
-                    <td>Prescott Bartlett</td>
-                    <td>Snack</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290238</td>
+                    <td>Jun 19, 2012</td>
+                    <td>Admin fee invoice sent</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Gavin@yahoo.com</td>
-                    <td>Gavin Cortez</td>
-                    <td>Snack</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290293</td>
+                    <td>Apr 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Martena@gmail.com</td>
-                    <td>Martena Mccray</td>
-                    <td>Snack</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290230</td>
+                    <td>Oct 4, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Unity@gmail.com</td>
-                    <td>Unity Butler</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290423</td>
+                    <td>Oct 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Howard@gmail.com</td>
-                    <td>Howard Hatfield</td>
-                    <td>Fruits</td>
-                    <td>Suppressed</td>
-                    <td></td>
+                    <td>18290283</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Data access request completed</td>
                     <td>Medical</td>
                   </tr>
                   <tr>
                     <td>Hope@yahoo.com</td>
-                    <td>Hope Fuentes</td>
-                    <td>Snack</td>
-                    <td>Suppressed</td>
-                    <td></td>
+                    <td>18239023</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Data access request received</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Vivian@yahoo.com</td>
-                    <td>Vivian Harrell</td>
-                    <td>Snack</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18296023</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Biometric</td>
                   </tr>
                   <tr>
                     <td>Timothy@gmail.com</td>
-                    <td>Timothy Mooney</td>
-                    <td>Fruits</td>
-                    <td>Active</td>
-                    <td>B2B</td>
+                    <td>15829023</td>
+                    <td>Mar 27, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Jackson@yahoo.com</td>
-                    <td>Jackson Bradshaw</td>
-                    <td>Snack</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290523</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Financial</td>
                   </tr>
                   <tr>
                     <td>Olivia@yahoo.com</td>
-                    <td>Olivia Liang</td>
-                    <td>Sauce</td>
-                    <td>Active</td>
-                    <td>Legal Person</td>
+                    <td>18296023</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Bruno@outlook.com</td>
-                    <td>Bruno Nash</td>
-                    <td>Dessert</td>
-                    <td>Suppressed</td>
-                    <td></td>
+                    <td>18629023</td>
+                    <td>Feb 20, 2012</td>
+                    <td>Stop request completed</td>
                     <td>Biometric</td>
                   </tr>
                   <tr>
                     <td>Sakura@yahoo.com</td>
-                    <td>Sakura Yamamoto</td>
-                    <td>Sauce</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>17829023</td>
+                    <td>Mar 12, 2012</td>
+                    <td>Stop request completed</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Thor@yahoo.com</td>
-                    <td>Thor Walton</td>
-                    <td>Fruits</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>71829023</td>
+                    <td>Jun 3, 2012</td>
+                    <td>Identification verified</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Finn@outlook.com</td>
-                    <td>Finn Camacho</td>
-                    <td>Sauce</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>18290723</td>
+                    <td>Nov 6, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Serge@yahoo.com</td>
-                    <td>Serge Baldwin</td>
-                    <td>Sauce</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>18289023</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Zenaida@outlook.com</td>
-                    <td>Zenaida Frank</td>
-                    <td>Dessert</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>18299023</td>
+                    <td>Oct 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Zorita@yahoo.com</td>
-                    <td>Zorita Serrano</td>
-                    <td>Dessert</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>18929023</td>
+                    <td>Feb 18, 2012</td>
+                    <td>Identification attempt initiated</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Jennifer@hotmail.com</td>
-                    <td>Jennifer Acosta</td>
-                    <td>Sauce, Snack</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>18829013</td>
+                    <td>Mar 4, 2012</td>
+                    <td>Stop request completed</td>
                     <td>Medical</td>
                   </tr>
                   <tr>
                     <td>Cara@hotmail.com</td>
-                    <td>Cara Stevens</td>
-                    <td>Plant-Based Egg</td>
-                    <td>Expired</td>
-                    <td></td>
+                    <td>16829853</td>
+                    <td>Jun 12, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Hermione@yahoo.com</td>
-                    <td>Hermione Butler</td>
-                    <td>Plant-Based Dairy</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>15829456</td>
+                    <td>Jun 10, 2012</td>
+                    <td>Identification verified</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Lael@outlook.com</td>
-                    <td>Lael Greer</td>
-                    <td>Farmer's Market</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18529863</td>
+                    <td>Mar 27, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Jonas@yahoo.com</td>
-                    <td>Jonas Alexander</td>
-                    <td>Fruits</td>
-                    <td>Suppressed</td>
-                    <td></td>
+                    <td>18290723</td>
+                    <td>Oct 7, 2012</td>
+                    <td>Data access request completed</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Shad@outlook.com</td>
-                    <td>Shad Decker</td>
-                    <td>Plant-Based Dairy</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18279823</td>
+                    <td>Jun 20, 2012</td>
+                    <td>Identification attempt initiated</td>
                     <td>Children</td>
                   </tr>
                   <tr>
                     <td>Michael@outlook.com</td>
-                    <td>Michael Bruce</td>
-                    <td>Snack</td>
-                    <td>Active</td>
-                    <td></td>
+                    <td>18290237</td>
+                    <td>Nov 23, 2012</td>
+                    <td>Invoice admin fee</td>
                     <td>Financial</td>
                   </tr>
                   <tr>
                     <td>Donna@gmail.com</td>
-                    <td>Donna Snider</td>
-                    <td>Sauce</td>
-                    <td>Active</td>
-                    <td>B2B</td>
+                    <td>18290238</td>
+                    <td>Oct 12, 2012</td>
+                    <td>Stop request completed</td>
                     <td>Children</td>
                   </tr>
                 </tbody>

@@ -70,7 +70,7 @@ var json = {
    "description": "Direct Marketing: \n1. Actively send Ads of your products & services to your targeted customers cell phones according to their preference settings.\n2. We DO NOT spam."
   },
   {
-   "name": "page2",
+   "name": "restaurant",
    "elements": [
     {
      "type": "text",
@@ -80,7 +80,7 @@ var json = {
     {
      "type": "radiogroup",
      "name": "question6",
-     "title": "Type of Dishes - select only 1",
+     "title": "Type of Dish - select only 1",
      "choices": [
       "Salad",
       "Snack",
@@ -96,7 +96,6 @@ var json = {
      "type": "checkbox",
      "name": "question8",
      "title": "Ingredients - select more than 1",
-     "hasOther": true,
      "choices": [
       {
        "value": "item1",
@@ -134,7 +133,8 @@ var json = {
        "value": "item9",
        "text": "MSG Free"
       }
-     ]
+     ],
+     "hasOther": true
     },
     {
      "type": "file",
@@ -142,7 +142,231 @@ var json = {
      "waitForUpload": true,
      "maxSize": 60000
     }
-   ]
+   ],
+   "visible": false,
+   "visibleIf": "{question1} = 'item1'"
+  },
+  {
+   "name": "fashion",
+   "elements": [
+    {
+     "type": "text",
+     "name": "question9",
+     "title": "Product Name (No Animal Fur, No Leather, Recycled/Upcycled, Conscientiously Made)"
+    },
+    {
+     "type": "radiogroup",
+     "name": "question11",
+     "title": "Type of Product - select only 1",
+     "choices": [
+      {
+       "value": "Salad",
+       "text": "Clothes"
+      },
+      {
+       "value": "Snack",
+       "text": "Bag"
+      },
+      {
+       "value": "Burger",
+       "text": "Shoes"
+      },
+      {
+       "value": "Dessert",
+       "text": "Jewelries"
+      },
+      {
+       "value": "Plant-Based Meat - beef/pork/chicken/seafood",
+       "text": "Home Decor"
+      }
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "question12",
+     "title": "Materials - select more than 1",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "Fabric"
+      },
+      {
+       "value": "item2",
+       "text": "Wood"
+      },
+      {
+       "value": "item3",
+       "text": "Metal"
+      },
+      {
+       "value": "item4",
+       "text": "Plastic"
+      },
+      {
+       "value": "item5",
+       "text": "Recycled"
+      },
+      {
+       "value": "item6",
+       "text": "Upcycled"
+      }
+     ],
+     "hasOther": true
+    },
+    {
+     "type": "file",
+     "name": "question13",
+     "title": "Upload Product Photo",
+     "waitForUpload": true,
+     "maxSize": 60000
+    }
+   ],
+   "visible": false,
+   "visibleIf": "{question1} = 'item3'"
+  },
+  {
+   "name": "grocery",
+   "elements": [
+    {
+     "type": "text",
+     "name": "question7",
+     "title": "Product Name (No Meat, No Dairy, No Egg, No Honey)"
+    },
+    {
+     "type": "radiogroup",
+     "name": "question10",
+     "title": "Type of Product - select only 1",
+     "choices": [
+      {
+       "value": "Salad",
+       "text": "Rice"
+      },
+      {
+       "value": "Snack",
+       "text": "Noodle"
+      },
+      {
+       "value": "Burger",
+       "text": "Sauce"
+      },
+      {
+       "value": "Dessert",
+       "text": "Herbs"
+      },
+      {
+       "value": "Plant-Based Meat - beef/pork/chicken/seafood",
+       "text": "Plant-Based Meat"
+      },
+      {
+       "value": "item1",
+       "text": "Plant-Based Egg"
+      },
+      {
+       "value": "item2",
+       "text": "Plant-Based Milk"
+      },
+      {
+       "value": "item3",
+       "text": "Chocolate"
+      },
+      {
+       "value": "item4",
+       "text": "Ice Cream"
+      },
+      {
+       "value": "item5",
+       "text": "Yogurt"
+      },
+      {
+       "value": "item6",
+       "text": "Cheese"
+      },
+      {
+       "value": "item7",
+       "text": "Cake"
+      },
+      {
+       "value": "item8",
+       "text": "Bread"
+      },
+      {
+       "value": "item9",
+       "text": "Alcohol"
+      }
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "question14",
+     "title": "Ingredients - select more than 1",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "Soy"
+      },
+      {
+       "value": "item2",
+       "text": "Coconut Oil"
+      },
+      {
+       "value": "item3",
+       "text": "Coconut Milk"
+      },
+      {
+       "value": "item4",
+       "text": "Glutinous Rice"
+      },
+      {
+       "value": "item5",
+       "text": "Yeast Extract"
+      },
+      {
+       "value": "item6",
+       "text": "Potato Starch"
+      },
+      {
+       "value": "item7",
+       "text": "Tree Nuts"
+      },
+      {
+       "value": "item8",
+       "text": "Soy Beans"
+      },
+      {
+       "value": "item9",
+       "text": "Cereals"
+      },
+      {
+       "value": "item10",
+       "text": "Beet Root"
+      },
+      {
+       "value": "item11",
+       "text": "Tumeric"
+      },
+      {
+       "value": "item12",
+       "text": "Pepper"
+      },
+      {
+       "value": "item13",
+       "text": "Ginger"
+      }
+     ],
+     "hasOther": true
+    },
+    {
+     "type": "file",
+     "name": "question15",
+     "visible": false,
+     "visibleIf": "{question1} = 'item2'",
+     "title": "Upload Product Photo",
+     "waitForUpload": true,
+     "maxSize": 60000
+    }
+   ],
+   "visible": false,
+   "visibleIf": "{question1} = 'item2'"
   }
  ]
 };
