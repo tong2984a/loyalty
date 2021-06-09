@@ -11,6 +11,7 @@ var json = {
      "type": "radiogroup",
      "name": "question1",
      "title": "Who are you - select only 1",
+     "defaultValue": "item1",
      "choices": [
       {
        "value": "item1",
