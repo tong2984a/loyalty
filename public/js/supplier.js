@@ -377,11 +377,11 @@ window.survey = new Survey.Model(json);
 survey
 .onComplete
 .add(function (sender) {
-  $.post(`/survey/suppliers`, {results: JSON.stringify(sender.data, null, 3)}, function(data, status) {
+  //$.post(`/survey/suppliers`, {results: JSON.stringify(sender.data, null, 3)}, function(data, status) {
     document
     .querySelector('#surveyResult')
-    .textContent = "Successfully completed survey";
-  })
+    .textContent = "";
+  //})
 });
 
 survey.render("surveyElement");
