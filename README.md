@@ -1,6 +1,3 @@
-# Loyalty API
+# Try me at 
 
-Check out
-- index.js
-- queries.js
-- public/loyalty.html
+public/loyalty.html
