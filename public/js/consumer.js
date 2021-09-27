@@ -10,64 +10,106 @@ var json = {
     {
      "type": "checkbox",
      "name": "question2",
-     "title": "Notify me when the following arrives",
+     "title": {
+      "default": "Notify me when the following arrives",
+      "zh-tw": "請給我這類型的純素廣告"
+     },
      "isRequired": true,
      "choices": [
       {
        "value": "item1",
-       "text": "Vegan Dishes"
+       "text": {
+        "default": "Restaurant Vegan Dish",
+        "zh-tw": "餐廳 - 純素餐"
+       }
       },
       {
        "value": "item2",
-       "text": "Vegan Groceries"
+       "text": {
+        "default": "Groceries Vegan Product",
+        "zh-tw": "超市 - 純素產品"
+       }
       },
       {
        "value": "item3",
-       "text": "Vegan Fashion & Lifestyle"
+       "text": {
+        "default": "Fashion & Lifestyle Vegan Product",
+        "zh-tw": "純素時裝及生活產品"
+       }
       }
      ],
      "hasNone": true,
-     "noneText": "Do not send me anything"
+     "noneText": {
+      "default": "Do not send me anything",
+      "zh-tw": "不要任何廣告"
+     }
     },
     {
      "type": "checkbox",
      "name": "question3",
      "visible": false,
      "visibleIf": "{question2} contains 'item1'",
-     "title": "Vegan Dishes",
+     "title": {
+      "default": "Vegan Dishes",
+      "zh-tw": "純素餐"
+     },
      "isRequired": true,
      "choices": [
       {
        "value": "item1",
-       "text": "Salad"
+       "text": {
+        "default": "Salad",
+        "zh-tw": "沙律"
+       }
       },
       {
        "value": "item2",
-       "text": "Burger"
+       "text": {
+        "default": "Burger",
+        "zh-tw": "漢堡包"
+       }
       },
       {
        "value": "item3",
-       "text": "Plant-Based Meat - beef/pork/chicken/seafood"
+       "text": {
+        "default": "Plant-Based Meat - beef/pork/chicken/seafood",
+        "zh-tw": "植物性肉類 - 牛/豬/雞/海鮮"
+       }
       },
       {
        "value": "item4",
-       "text": "Noodles"
+       "text": {
+        "default": "Dim Sum",
+        "zh-tw": "點心"
+       }
       },
       {
        "value": "item5",
-       "text": "Snack"
+       "text": {
+        "default": "Noodles",
+        "zh-tw": "麵類"
+       }
       },
       {
        "value": "item6",
-       "text": "Dessert"
+       "text": {
+        "default": "Snack",
+        "zh-tw": "零食"
+       }
       },
       {
        "value": "item7",
-       "text": "Coffee & Drinks"
+       "text": {
+        "default": "Dessert",
+        "zh-tw": "甜品"
+       }
       },
       {
        "value": "item8",
-       "text": "Dim Sum"
+       "text": {
+        "default": "Coffee & Drinks",
+        "zh-tw": "咖啡及飲料"
+       }
       }
      ]
     },
@@ -76,48 +118,75 @@ var json = {
      "name": "question4",
      "visible": false,
      "visibleIf": "{question2} contains 'item2'",
-     "title": "Vegan Groceries",
+     "title": {
+      "default": "Vegan Product",
+      "zh-tw": "純素產品"
+     },
      "isRequired": true,
      "choices": [
       {
        "value": "item1",
-       "text": "Vegetables"
+       "text": {
+        "default": "Plant-Based Meat - beef/pork/chicken/seafood",
+        "zh-tw": "植物性肉類 - 牛/豬/雞/海鮮"
+       }
       },
       {
        "value": "item2",
-       "text": "Plant-Based Meat"
+       "text": {
+        "default": "Plant-Based Egg",
+        "zh-tw": "植物性蛋"
+       }
       },
       {
        "value": "item3",
-       "text": "Seasonings"
+       "text": {
+        "default": "Plant-Based Dairy",
+        "zh-tw": "植物性奶"
+       }
       },
       {
        "value": "item4",
-       "text": "Sauce"
+       "text": {
+        "default": "Seasonings",
+        "zh-tw": "調味料"
+       }
       },
       {
        "value": "item5",
-       "text": "Plant-Based Egg"
+       "text": {
+        "default": "Sauce",
+        "zh-tw": "醬料"
+       }
       },
       {
        "value": "item6",
-       "text": "Snack"
+       "text": {
+        "default": "Snack",
+        "zh-tw": "零食"
+       }
       },
       {
        "value": "item7",
-       "text": "Dessert"
+       "text": {
+        "default": "Dessert",
+        "zh-tw": "甜品"
+       }
       },
       {
        "value": "item8",
-       "text": "Fruits"
+       "text": {
+        "default": "Drinks",
+        "zh-tw": "飲品"
+       }
       },
       {
        "value": "item9",
-       "text": "Plant-Based Dairy"
+       "text": "item9"
       },
       {
        "value": "item10",
-       "text": "Farmer's Market"
+       "text": "item10"
       }
      ]
     },
@@ -126,50 +195,80 @@ var json = {
      "name": "question5",
      "visible": false,
      "visibleIf": "{question2} contains 'item3'",
-     "title": "Vegan Fashion",
+     "title": {
+      "default": "Fashion & Lifestyle Vegan Product",
+      "zh-tw": "純素時裝及生活產品"
+     },
      "isRequired": true,
      "choices": [
       {
        "value": "item1",
-       "text": "Bag"
+       "text": {
+        "default": "Clothes",
+        "zh-tw": "衣服類"
+       }
       },
       {
        "value": "item2",
-       "text": "Shoes"
+       "text": {
+        "default": "Bag",
+        "zh-tw": "袋"
+       }
       },
       {
        "value": "item3",
-       "text": "Body Care"
+       "text": {
+        "default": "Shoes",
+        "zh-tw": "鞋"
+       }
       },
       {
        "value": "item4",
-       "text": "Recycling Services"
+       "text": {
+        "default": "Body Care & Cosmetics",
+        "zh-tw": "護膚及化妝"
+       }
       },
       {
        "value": "item5",
-       "text": "Zero-Waste Product"
+       "text": {
+        "default": "Hand-Made Jewelries",
+        "zh-tw": "手工飾物"
+       }
       },
       {
        "value": "item6",
-       "text": "Clothes"
+       "text": {
+        "default": "Zero-Waste Products",
+        "zh-tw": "零廢概念產品"
+       }
       },
       {
        "value": "item7",
-       "text": "Hand-Made Jewelries"
+       "text": {
+        "default": "Recycled & Upcycled Products",
+        "zh-tw": "環保概念產品"
+       }
       },
       {
        "value": "item8",
-       "text": "Recycled Product"
+       "text": {
+        "default": "Recycled & Upcycled Services",
+        "zh-tw": "環保概念服務"
+       }
       },
       {
        "value": "item9",
-       "text": "Upcycled Product"
+       "text": "item9"
       }
      ]
     }
    ],
    "title": "Pay-A-Vegan",
-   "description": "You are in control of your AD"
+   "description": {
+    "default": "You are in control of your AD",
+    "zh-tw": "選擇你要看的純素廣告"
+   }
   },
   {
    "name": "page2",
@@ -177,45 +276,69 @@ var json = {
     {
      "type": "checkbox",
      "name": "question6",
-     "title": "Seller Location - select more than 1",
+     "title": {
+      "default": "Seller Location - select more than 1",
+      "zh-tw": "商店位置 - 可選多項"
+     },
      "isRequired": true,
      "choices": [
       {
        "value": "item1",
-       "text": "HK Island"
+       "text": {
+        "default": "HK Island",
+        "zh-tw": "香港島"
+       }
       },
       {
        "value": "item2",
-       "text": "New Territories"
+       "text": {
+        "default": "Kowloon",
+        "zh-tw": "九龍"
+       }
       },
       {
        "value": "item3",
-       "text": "Online"
+       "text": {
+        "default": "New Territories",
+        "zh-tw": "新界"
+       }
       },
       {
        "value": "item4",
-       "text": "Kowloon"
+       "text": {
+        "default": "Islands",
+        "zh-tw": "離島"
+       }
       },
       {
        "value": "item5",
-       "text": "Islands"
+       "text": {
+        "default": "Online",
+        "zh-tw": "網上商店"
+       }
       }
      ]
     },
     {
      "type": "matrixdropdown",
      "name": "question8",
-     "title": "Notify me during - select more than 1",
+     "title": {
+      "default": "Notify me during - select more than 1",
+      "zh-tw": "只在下列時間通知我 - 可選多項"
+     },
      "isRequired": true,
      "columns": [
       {
-       "name": "Morning"
+       "name": "Morning",
+       "title": "Morning"
       },
       {
-       "name": "Afternoon"
+       "name": "Afternoon",
+       "title": "Afternoon"
       },
       {
-       "name": "Evening"
+       "name": "Evening",
+       "title": "Evening"
       }
      ],
      "choices": [
@@ -226,8 +349,14 @@ var json = {
      ],
      "cellType": "checkbox",
      "rows": [
-      "Mon-Fri only",
-      "Sat-Sun only"
+      {
+       "value": "Mon-Fri only",
+       "text": "Mon-Fri only"
+      },
+      {
+       "value": "Sat-Sun only",
+       "text": "Sat-Sun only"
+      }
      ]
     }
    ]
@@ -240,11 +369,24 @@ window.survey = new Survey.Model(json);
 survey
 .onComplete
 .add(function (sender) {
-  $.post(`/survey/consumers`, {results: JSON.stringify(sender.data, null, 3)}, function(data, status) {
+  //$.post(`/survey/consumers`, {results: JSON.stringify(sender.data, null, 3)}, function(data, status) {
     document
     .querySelector('#surveyResult')
     .textContent = "Successfully completed survey";
-  })
+  //})
 });
 
 survey.render("surveyElement");
+
+$(document).ready(function(){
+  $(".localeButton").on("change", function() {
+    switch($(this).val()) {
+      case 'en' :
+        survey.locale = "en";
+        break;
+      case 'zh-tw' :
+        survey.locale = "zh-tw";
+        break;
+    }
+  });
+});

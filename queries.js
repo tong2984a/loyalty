@@ -24,7 +24,7 @@ const getUserById = (request, response) => {
 
 const createUser = (request, response) => {
   const { alias, address, balance } = request.body
-  pool.query('INSERT INTO users (alias, address, balance) VALUES ($1, $2, $3) returning ID', [alias.trim(), address.trim(), balance], (error, result) => {
+  pool.query('INSERT INTO users (alias, address, balance) VALUES ($1, $2, $3) returning ID', [alias.trim(), (address ? address.trim() : ''), balance], (error, result) => {
     if (error) {
       throw error
     }
