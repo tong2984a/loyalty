@@ -1,3 +1,3 @@
 # Try me at 
 
-public/loyalty.html
+[nft mockup](https://ancient-eyrie-93473.herokuapp.com/nft-security.html)
